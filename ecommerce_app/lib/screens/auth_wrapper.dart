@@ -17,7 +17,6 @@ class AuthWrapper extends StatelessWidget {
 
       // 3. The builder runs every time the auth state changes
       builder: (context, snapshot) {
-
         // 4. If the snapshot is still loading, show a spinner
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Scaffold(
@@ -27,7 +26,7 @@ class AuthWrapper extends StatelessWidget {
 
         // 5. If the snapshot has data, a user is logged in
         if (snapshot.hasData) {
-          return const HomeScreen(); // Show the home screen
+          return const HomeScreen(); // Navigate to HomeScreen
         }
 
         // 6. If the snapshot has no data, no user is logged in
